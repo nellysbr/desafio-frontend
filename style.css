@@ -1,0 +1,65 @@
+/* Reset CSS para remover margens, paddings padrões e garantir que o box-sizing seja consistente */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilização do corpo da página */
+body {
+    background-color: red;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+/* Container principal para o logo e o botão */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.logo {
+    width: 200px;
+    height: auto;
+}
+
+
+.repeat-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: white;
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+}
+
+
+.avatar {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 3px solid white;
+    object-fit: cover; 
+}
+
+/* Media query para telas menores ou iguais a 768px de largura */
+@media (max-width: 768px) {
+    .avatar {
+        top: -48px; /* Posiciona os avatares no topo da tela */
+    }
+}
+
+/* Media query para telas maiores que 768px de largura */
+@media (min-width: 769px) {
+    .avatar {
+        bottom: -48px; /* Posiciona os avatares na base da tela */
+    }
+}
